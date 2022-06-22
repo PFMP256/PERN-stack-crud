@@ -1,4 +1,4 @@
-const pool = require("../db");
+const {pool} = require("../db");
 
 const createTask = async (req, res, next) => {
   try {
@@ -69,6 +69,7 @@ const deleteTask = async (req, res) => {
     next(error);
   }
 };
+
 
 module.exports = {
   createTask,
