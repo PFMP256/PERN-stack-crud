@@ -10,7 +10,7 @@ dotenv.config({ path: './.env' });
 const app = express();
 
 // Settings
-app.set("port", process.env.PORT );
+app.set("port", process.env.PORT || 8080 );
 
 // Middlewares
 app.use(cors());
