@@ -1,12 +1,16 @@
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
+const dotenv = require('dotenv');
 const router = require("./routes/tasks.routes");
+
+
+dotenv.config({ path: './.env' });
 
 const app = express();
 
 // Settings
-app.set("port", process.env.PORT || 4000);
+app.set("port", process.env.PORT );
 
 // Middlewares
 app.use(cors());
